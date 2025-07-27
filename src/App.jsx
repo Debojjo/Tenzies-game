@@ -53,6 +53,7 @@ function App() {
   }
 
   function hold(id) {
+    if (!gameActive) return; 
     setDice((prevDice) =>
       prevDice.map((die) =>
         die.id === id ? { ...die, isClicked: !die.isClicked } : die
